@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>질문하기</title>
+</head>
+<body>         <!-- HTML 문서의 주 내용 -->
+
+<h1>질문하기 폼 !!</h1>
+<form action="writing.jsp" method="post">
+	분류 : <select name="category">
+		<option value="c언어">c언어</option>
+		<option value="java">java</option>
+		<option value="android">android</option>
+		<option value="기타">기타</option>
+		</select></br></br>
+	제목 : <input type="text" size=70 name="title"/></br></br>
+	내용 : <textarea cols="70" rows="20" name="content"></textarea></br></br>
+	<input type="submit" value="질문작성"/>
+	<input type="button" value="작성취소" onclick="history.back();"/>
+</form>
+</body>
+</html>

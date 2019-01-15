@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>로그인</title>
+<script type="text/javascript" src="js/formck.js"></script>
+<script type="text/javascript">
+function sendTolog(){
+
+var f = document.login;
+
+
+f.method = "post";//post 설정하고
+f.target="parentForm";//부모 타겟 설정
+f.action = "loginprocess.jsp";//부모창에서 링크 이동
+f.submit(); //로그인 정보 제출
+self.close(); //팝업창 닫음
+
+
+}</script>
+<script type="text/javascript" >
+function findpop(){
+	//window.open(url,name,option);
+	window.open("findpw.jsp","join","width=500,height=500, left=100, top=50");
+}
+</script>
+<style>
+
+fieldset { 
+   border: 3px dotted black; 
+   text-align:center; 
+   width:550px;
+   height:550px;
+   -webkit-border-radius: 30px 0px; 
+   -ms-border-radius: 30px 0px;
+    border-radius: 30px; 
+} 
+</style>
+</head>
+<body>
+<h1 align="center" style="font-family:배달의민족 한나는 열한살;">학생 LOGIN</h1>
+<form name="login" action="loginprocess.jsp" method="post" onsubmit="return loginCheck(this);">
+ <div align="center">
+  <fieldset>
+       <table align="center" width="500" height="500" cellpadding="3">
+      
+         <tr>
+ 			<td><label for="id" style="font-size:25px; font-family:배달의민족 한나는 열한살;">학번</label></td>
+ 			<td> <input type="text" name="id" size="20"/><br></td>
+ 		
+         </tr>
+      
+       <tr>
+     	<td><label for="password" style="font-size:25px; font-family:배달의민족 한나는 열한살;">비밀번호</label></td>
+         <td><input type="password" name="password" size="20"/></td>
+
+         </tr>
+         <tr>
+         <td><a href="javascript:findpop();" style="font-size:15px; font-family:배달의민족 한나는 열한살;">비밀번호찾기</a></td>
+         <td><input type="submit" value="로그인" style="width:100px; height:50px; font-size:20px; font-family:배달의민족 한나는 열한살;"/><br></td>
+        
+         </tr>
+       
+       
+      </table>
+      </fieldset> 
+      </div>
+     </form>
+
+</body>
+</html>

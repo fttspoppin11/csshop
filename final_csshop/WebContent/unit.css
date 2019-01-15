@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+.slide{
+	width:300px;
+	overflow:hidden;
+	margin:0 auto;
+	position:relative;
+	
+}
+.slide ul{
+	width:600px;
+	list-style:none;
+	font-size:0;
+}
+.slide ul li{
+	display: inline-block;
+}
+.slide button.prev{
+	position:absolute;
+	left:0;
+	top:135px;/*300-50/2*/
+}
+.slide button.next{
+	position:absolute;
+	right:0;
+	top:135px;/*300-30/2*/
+	
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>로그인</title>
+<script type="text/javascript" src="js/formck.js"></script>
+<script>
+function ready(){
+		
+	document.getElementById("re").innerHTML="교수님 전화번호 사용 불가 이므로 추후 기능 추가 예정";
+			
+			
+}
+</script>
+<style>
+fieldset { 
+   border: 3px dotted black; 
+   text-align:center; 
+   width:550px;
+   height:550px;
+   -webkit-border-radius: 30px 0px; 
+   -ms-border-radius: 30px 0px;
+    border-radius: 30px; 
+} 
+</style>
+</head>
+<body>
+<h1 align="center" style="font-family:배달의민족 한나는 열한살;">교수 LOGIN</h1>
+<form name="login" action="pro_loginprocess.jsp" method="post" onsubmit="return ProloginCheck(this);">
+ <div align="center">
+  <fieldset>
+       <table align="center" width="500" height="500" cellpadding="3">
+      
+         <tr>
+ 			<td><label for="pro_id" style="font-size:25px; font-family:배달의민족 한나는 열한살;">아이디</label></td>
+ 			<td> <input type="text" name="pro_id" size="20"/><br></td>
+ 		
+         </tr>
+      
+       <tr>
+     	<td><label for="pro_password" style="font-size:25px; font-family:배달의민족 한나는 열한살;">비밀번호</label></td>
+         <td><input type="password" name="pro_password" size="20"/></td>
+
+         </tr>
+        
+       <tr>
+         <td><a href="#none" onclick="ready();"Style="font-size:15px; font-family:배달의민족 한나는 열한살;">비밀번호찾기</a></td>
+         <td><input type="submit" value="로그인" style="width:100px; height:50px; font-size:20px; font-family:배달의민족 한나는 열한살;"/><br></td>
+        
+         </tr>
+         <tr>
+         	<td colspan="2"><h3 "style="font-family:배달의민족 한나는 열한살;">교수 아이디 == 비밀번호 == _____skuniv@ac.kr</h3></td>
+         </tr>
+         <tr>
+         	<td colspan="2"><p id="re" style="color:red;"></p></td>
+         </tr>
+    
+       
+      </table>
+      </fieldset> 
+      </div>
+     </form>
+</body>
+</html>
